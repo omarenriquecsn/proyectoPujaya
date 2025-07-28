@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auction Ended Notification</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+      }
+      .header {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #e67e22;
+        color: white;
+      }
+      .content {
+        padding: 20px;
+        color: #333333;
+      }
+      .end-info {
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 20px 0;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #e67e22;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 20px 0;
+      }
+      .footer {
+        text-align: center;
+        padding: 20px;
+        color: #666666;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Auction Ended</h1>
+      </div>
+      <div class="content">
+        <h2>Hello {{userName}}!</h2>
+        <p>
+          The auction "{{auctionTitle}}" has ended automatically because its
+          scheduled end date has been reached.
+        </p>
+        <div class="end-info">
+          <h3>Auction Status:</h3>
+          <p>This auction is now closed and no further bids can be placed.</p>
+        </div>
+        <p>You can view the auction details by clicking the button below:</p>
+        <center>
+          <a href="{{auctionUrl}}" class="button">View Auction</a>
+        </center>
+        <p>If you have any questions, please contact our support team.</p>
+      </div>
+      <div class="footer">
+        <p>
+          This email was sent by PujaYa. Please do not reply to this message.
+        </p>
+        <p>© {{year}} PujaYa. All rights reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>
